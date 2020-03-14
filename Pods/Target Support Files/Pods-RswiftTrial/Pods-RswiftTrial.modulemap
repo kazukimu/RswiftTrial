@@ -1,0 +1,6 @@
+framework module Pods_RswiftTrial {
+  umbrella header "Pods-RswiftTrial-umbrella.h"
+
+  export *
+  module * { export * }
+}

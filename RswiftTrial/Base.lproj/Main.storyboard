@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RswiftTrial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KVv-A9-Xd7">
+                                <rect key="frame" x="103.5" y="144" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KVv-A9-Xd7" secondAttribute="height" multiplier="1:1" id="7i6-PD-5ma"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XE-VS-8Og">
+                                <rect key="frame" x="20" y="438" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xj0-hz-oFx">
+                                <rect key="frame" x="107" y="568" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KjQ-XP-fSA"/>
+                                </constraints>
+                                <state key="normal" title="色変更"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p18-D5-mdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrw-Hz-iPb">
+                                <rect key="frame" x="161" y="628" width="92" height="30"/>
+                                <state key="normal" title="フォント変更"/>
+                                <connections>
+                                    <action selector="changeFont:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kHr-ba-NPd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xj0-hz-oFx" firstAttribute="top" secondItem="1XE-VS-8Og" secondAttribute="bottom" constant="100" id="1yQ-mB-BHf"/>
+                            <constraint firstItem="KVv-A9-Xd7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1/2" id="6Ak-04-rVj"/>
+                            <constraint firstItem="1XE-VS-8Og" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6q2-f3-n6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1XE-VS-8Og" secondAttribute="trailing" constant="20" id="Lio-bG-WF2"/>
+                            <constraint firstItem="1XE-VS-8Og" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="LuI-Au-N2k"/>
+                            <constraint firstItem="zrw-Hz-iPb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Mc7-vB-L2W"/>
+                            <constraint firstItem="zrw-Hz-iPb" firstAttribute="top" secondItem="xj0-hz-oFx" secondAttribute="bottom" constant="30" id="R8w-ke-eea"/>
+                            <constraint firstItem="KVv-A9-Xd7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bRh-IB-6wW"/>
+                            <constraint firstItem="xj0-hz-oFx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vfd-Bu-kUt"/>
+                            <constraint firstItem="KVv-A9-Xd7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yEO-U9-kUE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="introductionLabel" destination="1XE-VS-8Og" id="NYh-q0-9Uj"/>
+                        <outlet property="profileImageView" destination="KVv-A9-Xd7" id="DaD-lj-Rcn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="127"/>
+        </scene>
+    </scenes>
+</document>
